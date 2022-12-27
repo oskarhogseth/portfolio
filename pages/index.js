@@ -6,7 +6,7 @@ import compiler from '../public/compiler.png';
 import powerplantgraph from '../public/powerplantgraph.png';
 import sleepingBarber from '../public/sleepingBarber.png';
 import MarkovProsesser from '../public/Markov-Prosesser.png';
-import BergenBysykkel from '../public/BergenBysykkel.png';
+import BergenBysykkel from '../public/bergenbysykkel.png';
 import BlobWars from '../public/BlobWars.jpg';
 import Tetris from '../public/tetris.jpg';
 import StepCounter from '../public/Step-counter.png';
@@ -26,7 +26,6 @@ export default function Home() {
       behavior: 'smooth',
     });
   }
-
 
   return (
     <div className={darkMode ? "dark" : ""}>
