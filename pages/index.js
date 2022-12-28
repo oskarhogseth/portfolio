@@ -20,12 +20,11 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const kompetanse = useRef(null);
 
-  const Python = useRef(null);
-  const Java = useRef(null)
-  const Haskell = useRef(null)
-  const C = useRef(null)
-  const SQLPHP = useRef(null)
-  const portfolio = useRef("https://github.com/oskarhogseth/portfolio")
+  const Python = "https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Python/"
+  const Java = "https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Java/"
+  const Haskell = "https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Haskell/"
+  const C = "https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/C/"
+  const SQLPHP = "https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/SQL%20&%20PHP/"
 
 
   const scrollToSection = (elementRef) => {
@@ -71,7 +70,7 @@ export default function Home() {
                 <Image className="w-24 h-24 rounded-full mt-4 md:mt-0 mx-auto sm:w-32 sm:h-32 md:mx-0 md:w-72 md:h-auto md:rounded-lg" src={mypicture} alt="my picture"/>
                 <div className="p-8 text-center md:text-left space-y-4">
                   
-                  <p className="text-white text-lg text-md font-thin">
+                  <p className="text-white text-md md:text-lg text-md font-thin">
                     Mitt navn er Oskar og jeg er en 21 år gammel gutt fra Porsgrunn.
                     Foreløpende er jeg student ved universitet i Bergen og tar en bachelor
                     innefor informatikk - DataTeknologi.
@@ -89,7 +88,7 @@ export default function Home() {
           <section className='px-10 md:px-20 lg:px-30'>
             <div className='bg-white dark:bg-gray-900'>
             <h3  className="text-2xl mt-10 text-md md:text-3xl dark:text-white font-thin">Min kompetanse</h3>
-              <p className="text-lg font-thin py-2 text-gray-800 md:text-lg dark:text-white">
+              <p className="text-md font-thin py-2 text-gray-800 md:text-lg dark:text-white">
                 Jeg går andre året på universitet i Bergen. <br/>
                 Så langt har jeg fått erfaring innenfor disse rammeverkene:
               </p>
@@ -104,12 +103,12 @@ export default function Home() {
                   <Image className="flex w-16 h-16 mx-auto" src={compiler}/>
                   
                   <ul>
-                    <li onClick={() => scrollToSection(Python)} className='py-1 hover:font-normal font-thin'>Python</li>
-                    <li onClick={() => scrollToSection(Java)} className='py-1 hover:font-normal font-thin'>Java</li>
-                    <li onClick={() => scrollToSection(Haskell)}className='py-1 hover:font-normal font-thin'>Haskell</li>
-                    <li onClick={() => scrollToSection(C)} className='py-1 hover:font-normal font-thin'>C</li>
-                    <li onClick={() => scrollToSection(SQLPHP)} className='py-1 hover:font-normal font-thin'>SQL</li>
-                    <li onClick={() => scrollToSection(SQLPHP)} className='py-1 hover:font-normal font-thin'>PHP</li>
+                    <li onClick={() => window.open(Python, '_blank')} className='py-1 hover:font-normal font-thin'>Python</li>
+                    <li onClick={() => window.open(Java, '_blank')} className='py-1 hover:font-normal font-thin'>Java</li>
+                    <li onClick={() => window.open(Haskell, '_blank')}className='py-1 hover:font-normal font-thin'>Haskell</li>
+                    <li onClick={() => window.open(C, '_blank')} className='py-1 hover:font-normal font-thin'>C</li>
+                    <li onClick={() => window.open(SQLPHP, '_blank')} className='py-1 hover:font-normal font-thin'>SQL</li>
+                    <li onClick={() => window.open(SQLPHP, '_blank')} className='py-1 hover:font-normal font-thin'>PHP</li>
                     <li onClick={() => window.open("https://github.com/oskarhogseth/portfolio", '_blank')} className='py-1 hover:font-normal font-thin'>Next.js & Tailwind</li>
                   </ul>
                 </div>
@@ -119,7 +118,7 @@ export default function Home() {
 
           <section className='px-10 md:px-20 lg:px-30'>
             <div className='bg-white dark:bg-gray-900 font-thin'>
-              <h3 className="text-2xl py-1 mt-10 text-md md:text-3xl dark:text-white">Mine mål</h3>
+              <h3 className='text-2xl py-1 mt-10 text-md md:text-3xl dark:text-white'>Mine mål</h3>
               <p className="text-md py-2 leading-8 text-gray-800 md:text-lg dark:text-white">
                 Etter min bachelor i Bergen, vil jeg gjerne gå videre med utdanningen min. <br/>
                 Jeg er svært interessert i dette studiet, og ser et stort potensiale i å gå videre. <br/>
@@ -127,8 +126,16 @@ export default function Home() {
 
                 <a onClick={() => window.open("https://www.ntnu.no/studier/oamlt", '_blank')} className='text-sky-400'> ledelse av teknologi </a>
                 eller 
-                <a onClick={() => window.open("https://www.uib.no/studier/MAMN-PROG", '_blank')} className='text-sky-400'> programutvikling.</a>
+                <a onClick={() => window.open("https://www.uib.no/studier/MAMN-PROG", '_blank')} className='text-sky-400'> programutvikling</a>
+                . <br/>
               </p>
+
+              <p className='text-md py-2 leading-8 text-gray-800 md:text-lg dark:text-white'>
+                Hvilken jobb jeg en dag ønsker å ende opp i er jeg fortsatt usikker på, <br/>
+                ettersom masterprogrammene er ganske så forskjellig, bransjen er stor  <br/>
+                og jeg vil ha mer erfaring før jeg tar en slik beslutning. 
+              </p>
+              
             </div>
           </section>
 
@@ -143,11 +150,11 @@ export default function Home() {
           </section>
 
           <section className='px-10 md:px-20 lg:px-30 font-thin'>
-            <div onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Java/Power-grid-graph/", '_blank')} className='bg-slate-200 rounded-lg mt-0 mb-8 py-12 dark:bg-slate-700'>
+            <div className='bg-slate-200 rounded-lg mt-0 mb-8 py-12 dark:bg-slate-700'>
               <div className='max-w-xl lg:max-w-4xl mx-auto pt-0 px-4'>
                 <div className='mt-4 pt-6 grid gap-16 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-12'>
 
-                  <div ref={Java} className='bg-white py-0 pb-2 px-0 rounded-lg shadow-md break-inside dark:bg-slate-600'>
+                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-md break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Java/Power-grid-graph/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {powerplantgraph} alt="Project photo"/>
                 
                     
@@ -156,7 +163,8 @@ export default function Home() {
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
                       Dette prosjektet handlet om algoritmer og hvor effektivt vi kan løse forskjellige
                       problemer gitt ved et power grid outage. <br/>
-                      Målet er å gjøre gridet minst kostlig, mens det også er effektivt
+                      Målet er å gjøre gridet minst kostlig, mens det også er effektivt. <br/>
+                      For å gjøre dette brukte vi mer enn kun en løsning.
                       
                     </p>
                     <div className='mb-6 flex items-center'>
@@ -168,7 +176,7 @@ export default function Home() {
                     </div>
                   </div>
                 
-                  <div ref={C} className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
+                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/C/The-sleeping-icecream-man/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {sleepingBarber} alt="Project photo"/>
                   
                     <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Semaphores and thread states</p>
@@ -188,7 +196,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div ref={Haskell} className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
+                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Haskell/Text-generator/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {MarkovProsesser} alt="Project photo" />
               
                     <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Markov prosesser og n-gram modeller</p>
@@ -209,7 +217,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div ref={SQLPHP} className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
+                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/SQL%20&%20PHP/Bergen-bysykkel/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {BergenBysykkel} alt="Project photo"/>
               
                     <div className='dark:bg-slate-600'>
@@ -230,7 +238,7 @@ export default function Home() {
                   </div>
                   </div>
 
-                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
+                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Java/Tetris/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {Tetris} alt="Project photo"/>
               
                     <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Object oriented programming</p>
@@ -252,7 +260,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
+                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Haskell/Step-counter/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {StepCounter} alt="Project photo"/>
               
                     <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Signal processing</p>
@@ -272,7 +280,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
+                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Java/BlobWars/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {BlobWars} alt="Project photo"/>
               
                     <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2 '>Object oriented programming</p>
@@ -294,14 +302,16 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div ref={Python} className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
+                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Python/Mine%20prosjekt/GUIAppOpener/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {Gui} alt="Project photo"/>
               
                     <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>GUI</p>
                     <p className='text-lg font-normal text-gray-900 mb-2 px-2 dark:text-white'>Multi File opener application</p>
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
                       Dette er kun et lite sideprosjekt jeg gjorde i python. <br/>
-                      python scriptet gjør det mulig å åpne fler apper på en gang gjennom en GUI.
+                      Python scriptet gjør det mulig å åpne flere apper på en gang. <br/>
+                      Det blir brukt en GUI for å finne filer. <br/> 
+                      Som standard er det kun mulig å gjøre dette med .exe filer, men kan endre i fil filteret.
                     </p>
                     <div className='mb-6 flex items-center'>
                       <div className='space-y-1 px-2'>
@@ -313,7 +323,7 @@ export default function Home() {
                   </div>
 
 
-                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
+                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {Other} alt="Project photo"/>
               
                     <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Lab oppgaver</p>
@@ -321,6 +331,7 @@ export default function Home() {
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
                       Gjennom semesterene har vi også mindre prosjekter som er problemløsningsoppgaver. <br/>
                       Disse leder opp til de større prosjektene. <br/>
+                      Mindre prosjekter er market som lab/uke-oppgaver. <br/>
                       Her vil også mine egne prosjekter ligge.
 
                     </p>
