@@ -20,6 +20,14 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const kompetanse = useRef(null);
 
+  const Python = useRef(null);
+  const Java = useRef(null)
+  const Haskell = useRef(null)
+  const C = useRef(null)
+  const SQLPHP = useRef(null)
+  const portfolio = useRef("https://github.com/oskarhogseth/portfolio")
+
+
   const scrollToSection = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop - 75,
@@ -43,7 +51,7 @@ export default function Home() {
                   <h1 className='md:text-xl flex items-center text-lg dark:text-white font-thin'>Portefølje</h1>
                   <ul className='flex items-center p-3'>
                     <li><a onClick={() => scrollToSection(kompetanse)} className= "text-white text-md md:text-lg font-thin hover:bg-slate-400 dark:hover:bg-slate-500 ml-4 bg-gradient-to-r px-4 py-1 md:py-2 bg-slate-800 dark:bg-slate-700 rounded-md">Prosjekter</a></li>
-                    <li><a className='text-white text-md md:text-lg font-thin hover:bg-slate-400 dark:hover:bg-slate-500 ml-2 bg-gradient-to-r px-4 py-1 md:ml-4 md:py-2 bg-slate-800 rounded-md dark:bg-slate-700' href="https://linkedin.com/in/oskar-høgseth-935b5522b">LinkedIn</a></li>
+                    <li><a onClick={() => window.open("https://linkedin.com/in/oskar-høgseth-935b5522b", '_blank')} className='text-white text-md md:text-lg font-thin hover:bg-slate-400 dark:hover:bg-slate-500 ml-2 bg-gradient-to-r px-4 py-1 md:ml-4 md:py-2 bg-slate-800 rounded-md dark:bg-slate-700'>LinkedIn</a></li>
                     <li> 
                       <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className= 'cursor-pointer text-4xl p-2 ml-1 md:ml-2 dark:text-white'
                     /></li>
@@ -60,7 +68,7 @@ export default function Home() {
           <section className='px-10 md:px-20 lg:px-30'>
             <div className='grid place-items-center '>
               <div className="rounded-lg bg-slate-800 dark:bg-slate-700 md:flex max-w-4xl">
-                <Image className="w-24 h-24 rounded-full mt-2 md:mt-0 mx-auto sm:w-32 sm:h-32 md:mx-0 md:w-72 md:h-auto md:rounded-lg" src={mypicture} alt="my picture"/>
+                <Image className="w-24 h-24 rounded-full mt-4 md:mt-0 mx-auto sm:w-32 sm:h-32 md:mx-0 md:w-72 md:h-auto md:rounded-lg" src={mypicture} alt="my picture"/>
                 <div className="p-8 text-center md:text-left space-y-4">
                   
                   <p className="text-white text-lg text-md font-thin">
@@ -71,7 +79,7 @@ export default function Home() {
                   
                   <div className="text-left font-thin">
                     <div className="text-sky-500 dark:text-sky-400">Oskar Høgseth</div>
-                    <div className="text-slate-500 dark:text-slate-500">Student - DataTeknologi, UiB</div>
+                    <div className="text-slate-500 dark:text-slate-400">Student - DataTeknologi, UiB</div>
                   </div>
                 </div>
               </div>
@@ -83,7 +91,6 @@ export default function Home() {
             <h3  className="text-2xl mt-10 text-md md:text-3xl dark:text-white font-thin">Min kompetanse</h3>
               <p className="text-lg font-thin py-2 text-gray-800 md:text-lg dark:text-white">
                 Jeg går andre året på universitet i Bergen. <br/>
-
                 Så langt har jeg fått erfaring innenfor disse rammeverkene:
               </p>
             </div>
@@ -97,13 +104,13 @@ export default function Home() {
                   <Image className="flex w-16 h-16 mx-auto" src={compiler}/>
                   
                   <ul>
-                    <li className='py-1 hover:font-normal font-thin'>Python</li>
-                    <li className='py-1 hover:font-normal font-thin'>Java</li>
-                    <li className='py-1 hover:font-normal font-thin'>Haskell</li>
-                    <li className='py-1 hover:font-normal font-thin'>C</li>
-                    <li className='py-1 hover:font-normal font-thin'>SQL</li>
-                    <li className='py-1 hover:font-normal font-thin'>PHP</li>
-                    <li className='py-1 hover:font-normal font-thin'>Next.js & Tailwind</li>
+                    <li onClick={() => scrollToSection(Python)} className='py-1 hover:font-normal font-thin'>Python</li>
+                    <li onClick={() => scrollToSection(Java)} className='py-1 hover:font-normal font-thin'>Java</li>
+                    <li onClick={() => scrollToSection(Haskell)}className='py-1 hover:font-normal font-thin'>Haskell</li>
+                    <li onClick={() => scrollToSection(C)} className='py-1 hover:font-normal font-thin'>C</li>
+                    <li onClick={() => scrollToSection(SQLPHP)} className='py-1 hover:font-normal font-thin'>SQL</li>
+                    <li onClick={() => scrollToSection(SQLPHP)} className='py-1 hover:font-normal font-thin'>PHP</li>
+                    <li onClick={() => window.open("https://github.com/oskarhogseth/portfolio", '_blank')} className='py-1 hover:font-normal font-thin'>Next.js & Tailwind</li>
                   </ul>
                 </div>
               </div>  
@@ -118,9 +125,9 @@ export default function Home() {
                 Jeg er svært interessert i dette studiet, og ser et stort potensiale i å gå videre. <br/>
                 Målet mitt er å komme inn på en master i enten 
 
-                <a className='text-sky-400' href="https://www.ntnu.no/studier/oamlt"> ledelse av teknologi </a>
+                <a onClick={() => window.open("https://www.ntnu.no/studier/oamlt", '_blank')} className='text-sky-400'> ledelse av teknologi </a>
                 eller 
-                <a className='text-sky-400' href="https://www.uib.no/studier/MAMN-PROG"> programutvikling.</a>
+                <a onClick={() => window.open("https://www.uib.no/studier/MAMN-PROG", '_blank')} className='text-sky-400'> programutvikling.</a>
               </p>
             </div>
           </section>
@@ -140,7 +147,7 @@ export default function Home() {
               <div className='max-w-xl lg:max-w-4xl mx-auto pt-0 px-4'>
                 <div className='mt-4 pt-6 grid gap-16 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-12'>
 
-                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-md break-inside dark:bg-slate-600'>
+                  <div ref={Java} className='bg-white py-0 pb-2 px-0 rounded-lg shadow-md break-inside dark:bg-slate-600'>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {powerplantgraph} alt="Project photo"/>
                 
                     
@@ -161,14 +168,14 @@ export default function Home() {
                     </div>
                   </div>
                 
-                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
+                  <div ref={C} className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {sleepingBarber} alt="Project photo"/>
                   
                     <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Semaphores and thread states</p>
                     <p className='text-lg font-normal text-gray-900 mb-2 px-2 dark:text-white'>Ice Cream Station</p>
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
                       I dette prosjektet tok vi i bruk et kjent problem innenfor C kode - the sleeping barber. <br/>
-                      Her blir semaforer brukt for å kontrollere fler threads samtidig.
+                      Her blir semaforer brukt for å kontrollere flere threads samtidig, uten at de kræsjer eller overkjører hverandre.
                     </p>
                     <div className='mb-6 flex items-center'>
                       <div className='space-y-1 px-2'>
@@ -181,7 +188,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
+                  <div ref={Haskell} className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {MarkovProsesser} alt="Project photo"/>
               
                     <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Markov prosesser og n-gram modeller</p>
@@ -202,7 +209,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
+                  <div ref={SQLPHP} className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {BergenBysykkel} alt="Project photo"/>
               
                     <div className='dark:bg-slate-600'>
@@ -226,7 +233,6 @@ export default function Home() {
                   <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {Tetris} alt="Project photo"/>
               
-                    
                     <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Object oriented programming</p>
                     <p className='text-lg font-normal text-gray-900 mb-2 px-2 dark:text-white'>Tetris</p>
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
@@ -288,7 +294,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
+                  <div ref={Python} className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {Gui} alt="Project photo"/>
               
                     <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>GUI</p>
