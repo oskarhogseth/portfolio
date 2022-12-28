@@ -143,7 +143,7 @@ export default function Home() {
           </section>
 
           <section className='px-10 md:px-20 lg:px-30 font-thin'>
-            <div className='bg-slate-200 rounded-lg mt-0 mb-8 py-12 dark:bg-slate-700'>
+            <div onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Java/Power-grid-graph/", '_blank')} className='bg-slate-200 rounded-lg mt-0 mb-8 py-12 dark:bg-slate-700'>
               <div className='max-w-xl lg:max-w-4xl mx-auto pt-0 px-4'>
                 <div className='mt-4 pt-6 grid gap-16 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-12'>
 
@@ -189,7 +189,7 @@ export default function Home() {
                   </div>
 
                   <div ref={Haskell} className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600'>
-                    <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {MarkovProsesser} alt="Project photo"/>
+                    <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {MarkovProsesser} alt="Project photo" />
               
                     <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Markov prosesser og n-gram modeller</p>
                     <p className='text-lg font-normal text-gray-900 mb-2 px-2 dark:text-white'>Text generator</p>
