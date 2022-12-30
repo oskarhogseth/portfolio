@@ -11,7 +11,7 @@ import BlobWars from '../public/BlobWars.jpg';
 import Tetris from '../public/tetris.jpg';
 import StepCounter from '../public/Step-counter.png';
 import Other from '../public/other.png';
-import Gui from '../public/gui.png';
+import Gui from '../public/gui.webp';
 
 import {useState} from "react";
 import {useRef} from "react";
@@ -20,11 +20,17 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const kompetanse = useRef(null);
 
+  const LinkedIn = "https://linkedin.com/in/oskar-høgseth-935b5522b"
+
   const Python = "https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Python/"
   const Java = "https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Java/"
   const Haskell = "https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Haskell/"
   const C = "https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/C/"
   const SQLPHP = "https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/SQL%20&%20PHP/"
+  const gitHubPortfolio = "https://github.com/oskarhogseth/portfolio"
+
+  const OAMLT = "https://www.ntnu.no/studier/oamlt"
+  const MAMN = "https://www.uib.no/studier/MAMN-PROG"
 
 
   const scrollToSection = (elementRef) => {
@@ -50,7 +56,7 @@ export default function Home() {
                   <h1 className='md:text-xl flex items-center text-lg dark:text-white font-thin'>Portefølje</h1>
                   <ul className='flex items-center p-3'>
                     <li><a onClick={() => scrollToSection(kompetanse)} className= "text-white text-md md:text-lg font-thin hover:bg-slate-400 dark:hover:bg-slate-500 ml-4 bg-gradient-to-r px-4 py-1 md:py-2 bg-slate-800 dark:bg-slate-700 rounded-md">Prosjekter</a></li>
-                    <li><a onClick={() => window.open("https://linkedin.com/in/oskar-høgseth-935b5522b", '_blank')} className='text-white text-md md:text-lg font-thin hover:bg-slate-400 dark:hover:bg-slate-500 ml-2 bg-gradient-to-r px-4 py-1 md:ml-4 md:py-2 bg-slate-800 rounded-md dark:bg-slate-700'>LinkedIn</a></li>
+                    <li><a onClick={() => window.open(LinkedIn, '_blank')} className='text-white text-md md:text-lg font-thin hover:bg-slate-400 dark:hover:bg-slate-500 ml-2 bg-gradient-to-r px-4 py-1 md:ml-4 md:py-2 bg-slate-800 rounded-md dark:bg-slate-700'>LinkedIn</a></li>
                     <li> 
                       <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className= 'cursor-pointer text-4xl p-2 ml-1 md:ml-2 dark:text-white'
                     /></li>
@@ -71,9 +77,9 @@ export default function Home() {
                 <div className="p-8 text-center md:text-left space-y-4">
                   
                   <p className="text-white text-md md:text-lg text-md font-thin">
-                    Mitt navn er Oskar og jeg er en 21 år gammel gutt fra Porsgrunn.
-                    Foreløpende er jeg student ved universitet i Bergen og tar en bachelor
-                    innefor informatikk - DataTeknologi.
+                    Mitt navn er Oskar og jeg er en 21 år gammel gutt fra Porsgrunn. <br/>
+                    For øyeblikket er jeg student ved Universitet i Bergen og tar en bachelor
+                    innenfor informatikk - DataTeknologi.
                   </p>
                   
                   <div className="text-left font-thin">
@@ -89,7 +95,6 @@ export default function Home() {
             <div className='bg-white dark:bg-gray-900'>
             <h3  className="text-2xl mt-10 text-md md:text-3xl dark:text-white font-thin">Min kompetanse</h3>
               <p className="text-md font-thin py-2 text-gray-800 md:text-lg dark:text-white">
-                Jeg går andre året på universitet i Bergen. <br/>
                 Så langt har jeg fått erfaring innenfor disse rammeverkene:
               </p>
             </div>
@@ -103,13 +108,13 @@ export default function Home() {
                   <Image className="flex w-16 h-16 mx-auto" src={compiler}/>
                   
                   <ul>
-                    <li onClick={() => window.open(Python, '_blank')} className='py-1 hover:font-normal font-thin'>Python</li>
-                    <li onClick={() => window.open(Java, '_blank')} className='py-1 hover:font-normal font-thin'>Java</li>
-                    <li onClick={() => window.open(Haskell, '_blank')}className='py-1 hover:font-normal font-thin'>Haskell</li>
-                    <li onClick={() => window.open(C, '_blank')} className='py-1 hover:font-normal font-thin'>C</li>
-                    <li onClick={() => window.open(SQLPHP, '_blank')} className='py-1 hover:font-normal font-thin'>SQL</li>
-                    <li onClick={() => window.open(SQLPHP, '_blank')} className='py-1 hover:font-normal font-thin'>PHP</li>
-                    <li onClick={() => window.open("https://github.com/oskarhogseth/portfolio", '_blank')} className='py-1 hover:font-normal font-thin'>Next.js & Tailwind</li>
+                    <li onClick={() => window.open(Python, '_blank')} className='py-1 hover:font-normal font-thin cursor-pointer'>Python</li>
+                    <li onClick={() => window.open(Java, '_blank')} className='py-1 hover:font-normal font-thin cursor-pointer'>Java</li>
+                    <li onClick={() => window.open(Haskell, '_blank')} className='py-1 hover:font-normal font-thin cursor-pointer'>Haskell</li>
+                    <li onClick={() => window.open(C, '_blank')} className='py-1 hover:font-normal font-thin cursor-pointer'>C</li>
+                    <li onClick={() => window.open(SQLPHP, '_blank')} className='py-1 hover:font-normal font-thin cursor-pointer'>SQL</li>
+                    <li onClick={() => window.open(SQLPHP, '_blank')} className='py-1 hover:font-normal font-thin cursor-pointer'>PHP</li>
+                    <li onClick={() => window.open(gitHubPortfolio, '_blank')} className='py-1 hover:font-normal font-thin cursor-pointer'>NextJS & Tailwind</li>
                   </ul>
                 </div>
               </div>  
@@ -124,16 +129,17 @@ export default function Home() {
                 Jeg er svært interessert i dette studiet, og ser et stort potensiale i å gå videre. <br/>
                 Målet mitt er å komme inn på en master i enten 
 
-                <a onClick={() => window.open("https://www.ntnu.no/studier/oamlt", '_blank')} className='text-sky-400'> ledelse av teknologi </a>
+                <a onClick={() => window.open(OAMLT, '_blank')} className='text-sky-400 cursor-pointer'> ledelse av teknologi </a>
                 eller 
-                <a onClick={() => window.open("https://www.uib.no/studier/MAMN-PROG", '_blank')} className='text-sky-400'> programutvikling</a>
+                <a onClick={() => window.open(MAMN, '_blank')} className='text-sky-400 cursor-pointer'> programutvikling</a>
                 . <br/>
               </p>
 
               <p className='text-md py-2 leading-8 text-gray-800 md:text-lg dark:text-white'>
-                Hvilken jobb jeg en dag ønsker å ende opp i er jeg fortsatt usikker på, <br/>
-                ettersom masterprogrammene er ganske så forskjellig, bransjen er stor  <br/>
-                og jeg vil ha mer erfaring før jeg tar en slik beslutning. 
+                Hvilken jobb jeg en dag ønsker å ende opp i er jeg fortsatt usikker på. <br/>
+                Jeg er også veldig inspirert av ledelse 
+                ettersom masterprogrammene er ganske så forskjellig og bransjen er stor.  <br/>
+                Mer erfaring vil hjelpe med dette.
               </p>
               
             </div>
@@ -143,7 +149,7 @@ export default function Home() {
             <div className='bg-white dark:bg-gray-900 font-thin'>
               <h3 className="text-2xl py-1 mt-10 md:text-3xl dark:text-white flex">Prosjekter</h3>
               <p className="text-md font-thin py-2 leading-8 text-gray-800 md:text-lg dark:text-white">
-                Gjennom studiet har vi hatt mange prosjekter. <br/>
+                Gjennom studiet har vi mange prosjekter. <br/>
                 Her er noen av de jeg er mest fornøyd med i de forskjellige programmeringsspråkene.
               </p>
             </div>
@@ -158,20 +164,20 @@ export default function Home() {
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {powerplantgraph} alt="Project photo"/>
                 
                     
-                    <p className='text-sm text-blue-800 dark:text-sky-400 mb-1 px-2'>Algoritmer</p>
+                    <p className='text-sm text-blue-800 dark:text-sky-500 font-medium mb-1 px-2'>Algoritmer</p>
                     <p className='text-lg font-normal text-gray-900 mb-2 px-2 dark:text-white'>Power Plant Graph</p>
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
                       Dette prosjektet handlet om algoritmer og hvor effektivt vi kan løse forskjellige
                       problemer gitt ved et power grid outage. <br/>
                       Målet er å gjøre gridet minst kostlig, mens det også er effektivt. <br/>
-                      For å gjøre dette brukte vi mer enn kun en løsning.
+                      Vi brukte mer enn en alogritme for å forstå og se forskjeller i resultat.
                       
                     </p>
                     <div className='mb-6 flex items-center'>
                       <div className='space-y-1 px-2'>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Java</span>
-                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Datastrukturer</span> <br/>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Algoritmer</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Java</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Datastrukturer</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Algoritmer</span>
                       </div>
                     </div>
                   </div>
@@ -179,19 +185,20 @@ export default function Home() {
                   <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/C/The-sleeping-icecream-man/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {sleepingBarber} alt="Project photo"/>
                   
-                    <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Semaphores and thread states</p>
+                    <p className='text-sm text-blue-800 dark:text-sky-500 font-medium mb-1 px-2'>Semaphores and thread states</p>
                     <p className='text-lg font-normal text-gray-900 mb-2 px-2 dark:text-white'>Ice Cream Station</p>
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
-                      I dette prosjektet tok vi i bruk et kjent problem innenfor C kode - the sleeping barber. <br/>
-                      Her blir semaforer brukt for å kontrollere flere threads samtidig, uten at de kræsjer eller overkjører hverandre.
+                      I dette prosjektet tok vi i bruk et kjent problem innenfor C kode <br/> - the sleeping barber. <br/>
+                      Her blir semaforer brukt for å kontrollere threads samtidig. <br/>
+                      Målet var å bruke locks slik at de forskjellige tråene ikke overkjører eller utgir feil resultat i iskrem køen.
                     </p>
                     <div className='mb-6 flex items-center'>
                       <div className='space-y-1 px-2'>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>C</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>C</span>
                         <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Semaforer</span>
-                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Threads</span> <br/>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>mutex-locks</span>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Critical sections</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Threads</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>mutex-locks</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Synchronization</span>
                       </div>
                     </div>
                   </div>
@@ -199,17 +206,17 @@ export default function Home() {
                   <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Haskell/Text-generator/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {MarkovProsesser} alt="Project photo" />
               
-                    <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Markov prosesser og n-gram modeller</p>
+                    <p className='text-sm text-blue-800 dark:text-sky-500 font-medium mb-1 px-2'>Markov prosesser og n-gram modeller</p>
                     <p className='text-lg font-normal text-gray-900 mb-2 px-2 dark:text-white'>Text generator</p>
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
                       Tekst generering prosjektet gikk ut på å bruke en Markov prosess og n-gram for å kunne genere ny tekst,
                       utifra en allerede gitt tekst. <br/>
                       Programmet analyserer og lager en grafbasert sannsynlighetsmodell, deretter blir modellen brukt
-                      til å generere ny, tilfeldig tekst.
+                      til å generere ny og tilfeldig tekst.
                     </p>
                     <div className='mb-6 flex items-center'>
                       <div className='space-y-1 px-2'>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Haskell</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Haskell</span>
                         <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Markov prosess</span>
                         <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Serialisering</span>
                         <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Komprimering</span>
@@ -221,18 +228,20 @@ export default function Home() {
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {BergenBysykkel} alt="Project photo"/>
               
                     <div className='dark:bg-slate-600'>
-                    <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>PHP management</p>
+                    <p className='text-sm text-blue-800 dark:text-sky-500 font-medium mb-1 px-2'>SQL management</p>
                     <p className='text-lg font-normal text-gray-900 mb-2 px-2 dark:text-white'>Bergen Bysykkel</p>
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
                       I dette prosjektet slo vi sammen PHP og en SQL database. <br/>
-                      Ved å bruke XAMPP Apache server skal PHP og databasen kunne oppdatere og fjerne
+                      Ved å bruke XAMPP Apache server, skal PHP og databasen kunne oppdatere og fjerne
                       person som er registert i databasen. <br/>
-                      Dette prosjektet var en enkel versjon av Bergen Bysykkel og hvordan man håndtere databaser.
+                      Dette prosjektet var en enkel versjon av Bergen Bysykkel og hvordan de håndterer brukere, stasjoner og sykler i Bergen.
                     </p>
                     <div className='mb-6 flex items-center '>
                       <div className='space-y-1 px-2 '>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>SQL</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>SQL</span>
                         <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>PHP</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Databasehåndtering</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>MySQL Server</span>
                       </div>
                     </div>
                   </div>
@@ -241,21 +250,21 @@ export default function Home() {
                   <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Java/Tetris/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {Tetris} alt="Project photo"/>
               
-                    <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Object oriented programming</p>
+                    <p className='text-sm text-blue-800 dark:text-sky-500 font-medium mb-1 px-2'>Object oriented programming</p>
                     <p className='text-lg font-normal text-gray-900 mb-2 px-2 dark:text-white'>Tetris</p>
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
                       Prosjektet gikk ut på å lage Tetris. <br/>
                       Jeg brukte Swing rammeverket som er inkludert i Java sitt standard-bibliotek. <br/>
-                      Dette var en av de første store prosjektene vi hadde i Java. <br/>
+                      Dette var en av de første store prosjektene vi hadde i Java og en spennende overgang fra Python.<br/>
                       Mye fokus på objektorientering.
                     </p>
                     <div className='mb-6 flex items-center'>
                       <div className='space-y-1 px-2'>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Java</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Java</span>
                         <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>objektorientert</span>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Polymorfisme</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Polymorfisme</span>
                         <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Arv</span>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Abstrakte klasser</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Abstrakte klasser</span>
                       </div>
                     </div>
                   </div>
@@ -263,41 +272,40 @@ export default function Home() {
                   <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Haskell/Step-counter/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {StepCounter} alt="Project photo"/>
               
-                    <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Signal processing</p>
+                    <p className='text-sm text-blue-800 dark:text-sky-500 font-medium mb-1 px-2'>Signal processing</p>
                     <p className='text-lg font-normal text-gray-900 mb-2 px-2 dark:text-white'>Step Counter</p>
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
                       Prosjektet gikk ut på å lage en steg teller. <br/>
                       Ved hjelp av et lav- og høypassfilter fjerner vi støy og feilkilder til telling. <br/>
-                      Dette gjøres ved enkel variant av Fourier-analyse.
-
-
+                      Dette gjøres ved enkel variant av Fourier-analyse. <br/>
+                      Vi brukte testdata og målet var å komme innenfor 2% feilmargin.
                     </p>
                     <div className='mb-6 flex items-center'>
                       <div className='space-y-1 px-2'>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Haskell</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Haskell</span>
                         <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Spectrogramfiltrering</span>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Gjennomsnittlig sinuskurve</span>                      </div>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Gjennomsnittlig sinuskurve</span>                      </div>
                     </div>
                   </div>
 
                   <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Java/BlobWars/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {BlobWars} alt="Project photo"/>
               
-                    <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2 '>Object oriented programming</p>
+                    <p className='text-sm text-blue-800 dark:text-sky-500 font-medium mb-1 px-2 '>Object oriented programming</p>
                     <p className='text-lg font-normal text-gray-900 mb-2 px-2 dark:text-white'>BlobWars</p>
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
                       Vi laget en enkel versjon av spillet BlobWars <br/>
                       I dette prosjektet var tankegangen å lage spillet fra allerede eksisterende kode brukt i andre spill.
-                      Derfor måtte vi sette oss inn i eksisterende kode og planlegge oppgaven derfra.
+                      Derfor måtte vi sette oss inn i eksisterende kode og planlegge oppgaven objektorientert utifra gitt kode.
 
                     </p>
                     <div className='mb-6 flex items-center'>
                       <div className='space-y-1 px-2'>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Java</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Java</span>
                         <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>objektorientert</span>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Polymorfisme</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Polymorfisme</span>
                         <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Arv</span>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Abstrakte klasser</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Abstrakte klasser</span>
                       </div>
                     </div>
                   </div>
@@ -305,19 +313,19 @@ export default function Home() {
                   <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/tree/Python/Mine%20prosjekt/GUIAppOpener/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {Gui} alt="Project photo"/>
               
-                    <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>GUI</p>
+                    <p className='text-sm text-blue-800 dark:text-sky-500 font-medium mb-1 px-2'>GUI</p>
                     <p className='text-lg font-normal text-gray-900 mb-2 px-2 dark:text-white'>Multi File opener application</p>
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
                       Dette er kun et lite sideprosjekt jeg gjorde i python. <br/>
                       Python scriptet gjør det mulig å åpne flere apper på en gang. <br/>
                       Det blir brukt en GUI for å finne filer. <br/> 
-                      Som standard er det kun mulig å gjøre dette med .exe filer, men kan endre i fil filteret.
+                      Som standard er det kun mulig å gjøre dette med .exe filer, men kan endres til alle r-w filer også.
                     </p>
                     <div className='mb-6 flex items-center'>
                       <div className='space-y-1 px-2'>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Python</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Python</span>
                         <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>GUI</span>
-      
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>FileExecution</span>
                       </div>
                     </div>
                   </div>
@@ -326,7 +334,7 @@ export default function Home() {
                   <div className='bg-white py-0 pb-2 px-0 rounded-lg shadow-lg break-inside dark:bg-slate-600 cursor-pointer' onClick={() => window.open("https://gitfront.io/r/oskarhog/EdXvv8VbYaTz/privately-shared-repository/", '_blank')}>
                     <Image className='mb-5 rounded-tl-lg rounded-tr-lg shadow-sm break-inside' src = {Other} alt="Project photo"/>
               
-                    <p className='text-sm text-blue-800 dark:text-sky-400 font-medium mb-1 px-2'>Lab oppgaver</p>
+                    <p className='text-sm text-blue-800 dark:text-sky-500 font-medium mb-1 px-2'>Lab oppgaver</p>
                     <p className='text-lg font-normal text-gray-900 mb-2 px-2 dark:text-white'>Mindre prosjekter som er relevante</p>
                     <p className='mt-2 mb-4 text-base text-gray-700 leading-6 px-2 dark:text-white'>
                       Gjennom semesterene har vi også mindre prosjekter som er problemløsningsoppgaver. <br/>
@@ -337,10 +345,10 @@ export default function Home() {
                     </p>
                     <div className='mb-6 flex items-center'>
                       <div className='space-y-1 px-2'>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Java</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Java</span>
                         <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Haskell</span>
                         <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>SQL</span>
-                        <span className=' text-slate-700 inline-flex items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Python</span>
+                        <span className=' text-slate-700 inline-flex ml-2 items-center px-3 py-0.5 mt-0 rounded-full text-sm font-medium bg-gray-100 dark:text-white dark:bg-slate-800'>Python</span>
                       </div>
                     </div>
                   </div>
@@ -348,7 +356,8 @@ export default function Home() {
                 </div>
               </div>
               <p className='text-center font-thin text-thin pt-6 dark:text-white'>
-                Større prosjekter er i samarbeid med medstudenter.
+                Større prosjekter er i samarbeid med medstudenter. <br/>
+                I de forskjellige mappene vil en kunne finne flere store prosjekter.
               </p>
             </div>
           </section>
