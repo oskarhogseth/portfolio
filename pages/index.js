@@ -71,23 +71,21 @@ export default function Home() {
           </section>
 
           <section className='px-10 md:px-20 lg:px-30'>
-            <div className='grid place-items-center '>
-              <div className="rounded-lg bg-slate-800 dark:bg-slate-700 md:flex max-w-4xl">
-                <Image className="w-24 h-24 rounded-full mt-4 md:mt-0 mx-auto sm:w-32 sm:h-32 md:mx-0 md:w-72 md:h-auto md:rounded-lg md:rounded-tr-none md:rounded-br-none" src={mypicture} alt="my picture"/>
-                <div className="p-8 text-center md:text-left space-y-2">
-                  
-                  <p className="text-white text-md md:text-lg font-thin">
-                    Mitt navn er Oskar og jeg er en 21 år gammel gutt fra Porsgrunn.
-                    Jeg er student ved Universitet i Bergen og går andre året på bachelor
-                    i informatikk - Datateknologi.
-                  </p>
-                  
-                  <div className="font-thin text-center md:text-left">
-                    <div className="text-sky-500 dark:text-sky-400">Oskar Høgseth</div>
-                    <div className="text-slate-500 dark:text-slate-400">Student - Datateknologi, UiB</div>
-                  </div>
-
+            <div className="rounded-lg bg-slate-800 dark:bg-slate-700 md:flex max-w-4xl"> <br/>
+              <Image className="w-24 h-24 rounded-full md:mt-0 mx-auto sm:w-32 sm:h-32 md:mx-0 md:w-72 md:h-auto md:rounded-lg md:rounded-tr-none md:rounded-br-none" src={mypicture} alt="my picture"/>
+              <div className="p-8 pt-6 text-center md:text-left space-y-2">
+                
+                <p className="text-white text-md md:text-lg font-thin">
+                  Mitt navn er Oskar og jeg er en 21 år gammel gutt fra Porsgrunn.
+                  Jeg er student ved Universitet i Bergen og går andre året på bachelor
+                  i informatikk - Datateknologi.
+                </p>
+                
+                <div className="font-thin text-center md:text-left pt-2">
+                  <div className="text-sky-500 dark:text-sky-400">Oskar Høgseth</div>
+                  <div className="text-slate-500 dark:text-slate-400">Student - Datateknologi, UiB</div>
                 </div>
+
               </div>
             </div>
           </section>
@@ -124,7 +122,7 @@ export default function Home() {
 
           <section className='px-10 md:px-20 lg:px-30'>
             <div className='bg-white dark:bg-gray-900 font-thin'>
-              <h3 className='text-2xl py-1 mt-12 text-md md:text-3xl dark:text-white'>Mine mål</h3>
+              <h3 className='text-2xl py-1 mt-14 text-md md:text-3xl dark:text-white'>Mine mål</h3>
               <p className="text-md py-2 leading-8 text-gray-800 md:text-lg dark:text-white">
                 Etter min bachelor i Bergen, vil jeg gjerne gå videre med utdanningen min. <br/>
                 Jeg er svært interessert i dette studiet, og ser et stort potensiale i å gå videre. <br/>
