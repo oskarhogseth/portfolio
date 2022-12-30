@@ -77,7 +77,7 @@ export default function Home() {
                 <div className="p-8 text-center md:text-left space-y-4">
                   
                   <p className="text-white text-md md:text-lg text-md font-thin">
-                    Mitt navn er Oskar og jeg er en 21 år gammel gutt fra Porsgrunn. <br/>
+                    Mitt navn er Oskar og jeg er en 21 år gammel gutt fra Porsgrunn.
                     For øyeblikket er jeg student ved Universitet i Bergen og tar en bachelor
                     innenfor informatikk - DataTeknologi.
                   </p>
