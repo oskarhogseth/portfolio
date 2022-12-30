@@ -18,7 +18,7 @@ import {useRef} from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-  const kompetanse = useRef(null);
+  const Prosjekter = useRef(null);
 
   const LinkedIn = "https://linkedin.com/in/oskar-høgseth-935b5522b"
 
@@ -55,8 +55,8 @@ export default function Home() {
               <div className='flex justify-between mx-auto max-w-screen-max text-md bg-white px-6 w-full dark:bg-gray-900'>
                   <h1 className='md:text-xl flex items-center text-lg dark:text-white font-thin'>Portefølje</h1>
                   <ul className='flex items-center p-3'>
-                    <li><a onClick={() => scrollToSection(kompetanse)} className= "text-white text-md md:text-lg font-thin hover:bg-slate-400 dark:hover:bg-slate-500 ml-4 bg-gradient-to-r px-4 py-1 md:py-2 bg-slate-800 dark:bg-slate-700 rounded-md">Prosjekter</a></li>
-                    <li><a onClick={() => window.open(LinkedIn, '_blank')} className='text-white text-md md:text-lg font-thin hover:bg-slate-400 dark:hover:bg-slate-500 ml-2 bg-gradient-to-r px-4 py-1 md:ml-4 md:py-2 bg-slate-800 rounded-md dark:bg-slate-700'>LinkedIn</a></li>
+                    <li><a onClick={() => scrollToSection(Prosjekter)} className= "text-white text-md md:text-lg font-thin hover:bg-slate-600 dark:hover:bg-slate-500 ml-4 bg-gradient-to-r px-4 py-1 md:py-2 bg-slate-800 dark:bg-slate-700 rounded-md cursor-pointer">Prosjekter</a></li>
+                    <li><a onClick={() => window.open(LinkedIn, '_blank')} className='text-white text-md md:text-lg font-thin hover:bg-slate-600 dark:hover:bg-slate-500 ml-2 bg-gradient-to-r px-4 py-1 md:ml-4 md:py-2 bg-slate-800 rounded-md dark:bg-slate-700 cursor-pointer'>LinkedIn</a></li>
                     <li> 
                       <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className= 'cursor-pointer text-4xl p-2 ml-1 md:ml-2 dark:text-white'
                     /></li>
@@ -73,19 +73,20 @@ export default function Home() {
           <section className='px-10 md:px-20 lg:px-30'>
             <div className='grid place-items-center '>
               <div className="rounded-lg bg-slate-800 dark:bg-slate-700 md:flex max-w-4xl">
-                <Image className="w-24 h-24 rounded-full mt-4 md:mt-0 mx-auto sm:w-32 sm:h-32 md:mx-0 md:w-72 md:h-auto md:rounded-lg" src={mypicture} alt="my picture"/>
-                <div className="p-8 text-center md:text-left space-y-4">
+                <Image className="w-24 h-24 rounded-full mt-4 md:mt-0 mx-auto sm:w-32 sm:h-32 md:mx-0 md:w-72 md:h-auto md:rounded-lg md:rounded-tr-none md:rounded-br-none" src={mypicture} alt="my picture"/>
+                <div className="p-8 text-center md:text-left space-y-2">
                   
-                  <p className="text-white text-md md:text-lg text-md font-thin">
+                  <p className="text-white text-md md:text-lg font-thin">
                     Mitt navn er Oskar og jeg er en 21 år gammel gutt fra Porsgrunn.
-                    For øyeblikket er jeg student ved Universitet i Bergen og tar en bachelor
-                    innenfor informatikk - DataTeknologi.
+                    Jeg er student ved Universitet i Bergen og går andre året på bachelor
+                    i informatikk - Datateknologi.
                   </p>
                   
-                  <div className="text-left font-thin">
+                  <div className="font-thin text-center md:text-left">
                     <div className="text-sky-500 dark:text-sky-400">Oskar Høgseth</div>
-                    <div className="text-slate-500 dark:text-slate-400">Student - DataTeknologi, UiB</div>
+                    <div className="text-slate-500 dark:text-slate-400">Student - Datateknologi, UiB</div>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -95,7 +96,7 @@ export default function Home() {
             <div className='bg-white dark:bg-gray-900'>
             <h3  className="text-2xl mt-10 text-md md:text-3xl dark:text-white font-thin">Min kompetanse</h3>
               <p className="text-md font-thin py-2 text-gray-800 md:text-lg dark:text-white">
-                Så langt har jeg fått erfaring innenfor disse rammeverkene:
+                Så langt har jeg erfaring innenfor disse rammeverkene:
               </p>
             </div>
           </section>
@@ -123,31 +124,30 @@ export default function Home() {
 
           <section className='px-10 md:px-20 lg:px-30'>
             <div className='bg-white dark:bg-gray-900 font-thin'>
-              <h3 className='text-2xl py-1 mt-10 text-md md:text-3xl dark:text-white'>Mine mål</h3>
+              <h3 className='text-2xl py-1 mt-12 text-md md:text-3xl dark:text-white'>Mine mål</h3>
               <p className="text-md py-2 leading-8 text-gray-800 md:text-lg dark:text-white">
                 Etter min bachelor i Bergen, vil jeg gjerne gå videre med utdanningen min. <br/>
                 Jeg er svært interessert i dette studiet, og ser et stort potensiale i å gå videre. <br/>
                 Målet mitt er å komme inn på en master i enten 
 
-                <a onClick={() => window.open(OAMLT, '_blank')} className='text-sky-400 cursor-pointer'> ledelse av teknologi </a>
+                <a onClick={() => window.open(OAMLT, '_blank')} className='text-sky-600 cursor-pointer'> ledelse av teknologi </a>
                 eller 
-                <a onClick={() => window.open(MAMN, '_blank')} className='text-sky-400 cursor-pointer'> programutvikling</a>
+                <a onClick={() => window.open(MAMN, '_blank')} className='text-sky-600 cursor-pointer'> programutvikling</a>
                 . <br/>
               </p>
 
               <p className='text-md py-2 leading-8 text-gray-800 md:text-lg dark:text-white'>
-                Hvilken jobb jeg en dag ønsker å ende opp i er jeg fortsatt usikker på. <br/>
-                Jeg er også veldig inspirert av ledelse 
-                ettersom masterprogrammene er ganske så forskjellig og bransjen er stor.  <br/>
-                Mer erfaring vil hjelpe med dette.
+                Hvilken jobb jeg en dag ønsker å ende opp i er jeg usikker på. <br/>
+                Masterprogrammene er smålig ulike, men bransjen er stor og
+                jeg vil ha mer jobberfaring før jeg tar en slik beslutning.
               </p>
               
             </div>
           </section>
 
-          <section className='px-10 md:px-20 lg:px-30' ref={kompetanse}>
+          <section className='px-10 md:px-20 lg:px-30' ref={Prosjekter}>
             <div className='bg-white dark:bg-gray-900 font-thin'>
-              <h3 className="text-2xl py-1 mt-10 md:text-3xl dark:text-white flex">Prosjekter</h3>
+              <h3 className="text-2xl py-1 mt-10 md:text-3xl dark:text-white">Prosjekter</h3>
               <p className="text-md font-thin py-2 leading-8 text-gray-800 md:text-lg dark:text-white">
                 Gjennom studiet har vi mange prosjekter. <br/>
                 Her er noen av de jeg er mest fornøyd med i de forskjellige programmeringsspråkene.
@@ -156,7 +156,7 @@ export default function Home() {
           </section>
 
           <section className='px-10 md:px-20 lg:px-30 font-thin'>
-            <div className='bg-slate-200 rounded-lg mt-0 mb-8 py-12 dark:bg-slate-700'>
+            <div className='bg-slate-200 rounded-lg mt-0 mb-8 py-12 dark:bg-slate-700 shadow-lg'>
               <div className='max-w-xl lg:max-w-4xl mx-auto pt-0 px-4'>
                 <div className='mt-4 pt-6 grid gap-16 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-12'>
 
