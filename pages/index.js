@@ -136,7 +136,7 @@ export default function Home() {
 
               <p className='text-md py-2 leading-8 text-gray-800 md:text-lg dark:text-white'>
                 Hvilken jobb jeg en dag ønsker å ende opp i er jeg usikker på. <br/>
-                Masterprogrammene er smålig ulike, men bransjen er stor og
+                Masterprogrammene er ulike, men bransjen er stor og
                 jeg vil ha mer jobberfaring før jeg tar en slik beslutning.
               </p>
               
